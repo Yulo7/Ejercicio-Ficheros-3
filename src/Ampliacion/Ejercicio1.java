@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Ampliacion {
+public class Ejercicio1 {
     static void main() throws IOException {
         File directorio = new File("src/Ampliacion/Ficheros");
         File archivo = new File(directorio+"/datos.txt");
@@ -18,6 +18,7 @@ public class Ampliacion {
         else {
             while (salir==false) {
                 System.out.print("Que desea: \n");
+                System.out.print("Si desea salir pulse X \n");
                 String palabras=sc.nextLine();
 
                 if(palabras.equals("x")){
