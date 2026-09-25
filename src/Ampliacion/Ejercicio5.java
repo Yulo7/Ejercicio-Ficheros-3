@@ -34,7 +34,7 @@ public class Ejercicio5 {
             System.out.println("Contiene " + contador + " lineas");
             //Orden Inverso
             for (int i = contador - 1; i >= 0; i--) {
-                try (BufferedWriter escribir= new BufferedWriter(new FileWriter(ruta+"/salida.txt",true));){
+                try (BufferedWriter escribir= new BufferedWriter(new FileWriter(ruta+"/salida.txt"));){
                     escribir.write(orden[i]);
                     escribir.newLine();
                 }
