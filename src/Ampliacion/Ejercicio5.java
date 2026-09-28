@@ -34,7 +34,7 @@ public class Ejercicio5 {
             System.out.println("Contiene " + contador + " lineas");
             //Orden Inverso
             for (int i = contador - 1; i >= 0; i--) {
-                try (BufferedWriter escribir= new BufferedWriter(new FileWriter(ruta+"/salida.txt",true));){
+                try (BufferedWriter escribir= new BufferedWriter(new FileWriter(ruta+"/salida.txt",true))){
                     escribir.write(orden[i]);
                     escribir.newLine();
                 }
@@ -44,6 +44,9 @@ public class Ejercicio5 {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+        finally {
+            System.out.println("Se ha creado el fichero salida.txt con el contenido del fichero "+nombreFichero+" en orden inverso");
         }
     }
 }
